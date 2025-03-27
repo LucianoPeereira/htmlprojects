@@ -7,168 +7,50 @@ html{
     text-align: center;
     font-family: Poppins, sans-serif;
 }
-
-nav{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 25px;
-    border-bottom: 2px solid #e3e3e3;
-}
-
-nav a{
-    text-decoration: none;
-    color: #929292;
-    margin: 0 20px;
-    display: inline-block; 
-}
-
-nav a:hover{
-    color: #000;
-    transform: scale(1.1); /* Um aumento menor */
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-nav a.active{
-    color: #000;
-    font-weight: bold;
-}
-
-header{
-    padding-top: calc(50px + 1rem + 2px);
-}
-h1{
-    margin-top: 100px;
-    font-size: 3.75rem;
-    font-weight: bold;
-    line-height: 1.2em;
-}
-
-h1 + p{
-    width: 800px;   
-    margin: 35px auto;
-}
-
-#cta-button{
-    text-decoration: none;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #D786FF, #722CFF);
-    display: inline-block;
-    padding: 1em 3em;
-    font-weight: 600;
-    border-radius: 1000px;
-    transition: 500ms ease;
-}
-#cta-button:hover{
-    scale: 1.1;
-}
-
-.video-player{
-    margin-top:30px;
-    width:min(1100px, 100%); /* Responsive */
-    aspect-ratio: 16/9;
-    border-radius: 10px;
-}
-
-.products-container{
-    margin-top: 30px;
-}
-
-.item{
+body{
     box-sizing: border-box;
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-    margin: 0 20px;
-    margin-bottom: 20px;;
-    align-content: center;
-    padding: 20px;
-    border-radius: 30px;
+    min-height: 100vh;
+    background-color: #0F1016;
+    gap:20px;   
+    display: flex;
+     /* Align elements horizontally - Main Axis*/
+     justify-content: center;   
+     /* Align elements vertically - Cross Axis*/
+     align-items: center; 
+}
+
+body-alternative{
+    min-height: 800px;
+    border: 1px solid black;
+    display: flex;
+    gap:20px;   
+     /* Add responsive align items */
+     flex-wrap: wrap; 
+     /* Align elements horizontally - Main Axis*/
+     justify-content: center;   
+     /* Align elements vertically - Cross Axis*/
+     align-items: center; 
+     /* Control the alignment of all  the lines together*/
+     align-content: center; 
+}
+
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px
+}
+
+.container{
+    width: min(350px, 100%);
+    box-sizing: border-box;
+    background-color: #191A20;
+    border: 3px solid #4B4C55;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     transition: transform 0.4s ease-in-out;
 }
 
-.item:hover{
-    transform: scale(1.1);
-}
-
-.item > h2{
-    margin-bottom: 10px;
-}
-
-.item:first-child{
-    border:1px solid black;
-}
-
-.item:nth-child(2){
-    background-color: #7932ff;
-    color:white;
-}
-
-.item:last-child{
-    background-color: black;
-    color:white;
-}
-
-.item > p{
-    text-align: justify;
-}
-
-form{
-    margin-top:30px;
-}
-
-input{
-    display: block;
-    margin: 0 auto;
-    margin-bottom:15px;
-    font:inherit;
-    border-radius: 30px;
-
-}
-
-input[type="text"], input[type="password"]{
-   padding: 5px 20px;
-   width: 400px;
-   height: 50px;
-   border: none;
-   background-color: #EBEDF5;
-}
-
-input[type="submit"]{
-    background: linear-gradient(to right, #D786FF, #722CFF);
-    width: 200px;
-    padding: 10px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.loading {
-    height:50px;
-    width:50px;
-    border: 6px solid #722CFF;
-    border-radius: 4px;
-    box-shadow: 0 0 8px #722CFF, 0 0 8px #722CFF inset;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index:10;
-    animation:2s loading ease-in-out infinite;
-}
-
-@keyframes loading {
-    0% {
-        transform: translate(-50%, -50%) rotateX(0) rotateY(0) rotateZ(0);
-    }
-    33% {
-        transform: translate(-50%, -50%) rotateX(180deg) rotateY(0) rotateZ(0);
-    }
-    67% {
-        transform: translate(-50%, -50%) rotateX(180deg) rotateY(180deg) rotateZ(0);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotateX(180deg) rotateY(180deg) rotateZ(180deg);
-    }
-}
